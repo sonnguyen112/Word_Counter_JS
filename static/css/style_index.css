@@ -1,0 +1,27 @@
+@keyframes raise{
+    0%{
+        font-size: 10px;
+    }
+    100%{
+        font-size: 75px;
+    }
+}
+
+h1{
+    animation-name: raise;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    color: green;
+}
+
+body{
+    text-align: center;
+}
+
+.history{
+    display: flex;
+    justify-content: center;
+}
+table{
+    border: 2px solid black;
+}

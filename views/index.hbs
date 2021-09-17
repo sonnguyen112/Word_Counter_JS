@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style_index.css">
+    </head>
+
+    <body>
+        <a href="logout">Log Out</a>
+        <h1>Hello {{user.username}}</h1>
+        <h1>Please input text</h1>
+        <form method="POST" action = "counter">
+            <textarea name = "text" rows="20" cols="40"></textarea>
+            <br>
+            <input type="submit">
+        </form>
+        <h1>History</h1>
+        <div class="history">
+            <table>
+                <thead>
+                    <th>Text</th>
+                    <th>Number Of Word</th>
+                </thead>
+                <tbody>
+                    {{#each histories}}
+                        <tr>
+                            <td>{{ this.text }}</td>
+                            <td>{{ this.num_word }}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>    
+        </div>  
+    </body>   
+</html>
